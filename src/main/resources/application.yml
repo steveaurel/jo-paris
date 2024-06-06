@@ -1,0 +1,52 @@
+server:
+  port: 8080
+
+
+spring:
+  application:
+    name: jo-paris
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  datasource:
+    url: jdbc:postgresql://postgresql-steve.alwaysdata.net/steve_auth
+    username: steve_auth
+    password: 6Hpc4i!wrGReTmS
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: awesomepizza90@gmail.com
+    password: bdymdfokorqmczcj
+    default-encoding: UTF-8
+    properties:
+      mail:
+        mime:
+          charset: UTF
+        smtp:
+          writetimeout: 10000
+          connectiontimeout: 10000
+          timeout: 10000
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+jwt:
+  secret: MiAVzqUXy5Tfr1kVIGpPMiAVzqUXy5Tfr1kVIGpP
+  expiration: 86400
+
+springdoc:
+  swagger-ui:
+    path: '/swagger-ui.html'
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
